@@ -1,0 +1,339 @@
+@font-face {
+	font-family: 'fontawesome';
+	src:url('../fonts/fontawesome/fontawesome.eot?-e43dk9');
+	src:url('../fonts/fontawesome/fontawesome.eot?#iefix-e43dk9') format('embedded-opentype'),
+		url('../fonts/fontawesome/fontawesome.woff?-e43dk9') format('woff'),
+		url('../fonts/fontawesome/fontawesome.ttf?-e43dk9') format('truetype'),
+		url('../fonts/fontawesome/fontawesome.svg?-e43dk9#fontawesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}  /*Made with http://icomoon.io/app */
+
+/* General style */
+.grid-gallery ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.grid-gallery figure {
+	margin: 0;
+}
+
+.grid-gallery figure img {
+	display: block;
+	width: 100%;
+}
+
+.grid-gallery figcaption h3 {
+	margin: 0;
+	font-size:16px;
+	font-weight:200;
+	color:#fff;
+}
+
+.grid-gallery figcaption p {
+	margin: 0;
+	color:#fff;
+	font-weight:200;
+	font-size:12px;
+
+}
+
+.grid-gallery figcaption .text-tan{
+	line-height:22px;
+	text-indent:25px
+}
+
+/* Grid style */
+.grid-wrap {
+	max-width: 69em;
+	margin: 0 auto;
+	padding: 0 1em 1.875em;
+}
+
+.grid {
+	margin: 0 auto;
+}
+
+.grid li {
+	width: 25%;
+	float: left;
+	cursor: pointer;
+}
+
+.grid figure {
+	padding: 10px;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+
+.grid li:hover figure {
+	opacity: 0.7;
+}
+
+.grid figcaption {
+	width:100%;
+	background: #333333;
+	padding:10px 0;
+	text-align:center;
+}
+
+
+
+/* Slideshow style */
+.slideshow {
+	position: fixed;
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 500;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	-webkit-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.slideshow-open .slideshow {
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.slideshow ul {
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translate3d(0,0,150px);
+	transform: translate3d(0,0,150px);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.slideshow ul.animatable li {
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.slideshow-open .slideshow ul {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.slideshow li {
+	width: 660px;
+	height: 560px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -280px 0 0 -330px;
+	visibility: hidden;
+}
+
+.slideshow li.show {
+	display:none;
+	visibility: visible;
+}
+
+.slideshow li:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,0.8);
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.slideshow li.current{
+	display:block;
+}
+
+.slideshow li.current:after {
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+	transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+.slideshow figure {
+	width: 100%;
+	height: 100%;
+	background: #282828;
+	border-top:1px solid #282828;
+	border-left: 50px solid #282828;
+	border-right: 50px solid #282828;
+	border-bottom: 50px solid #282828;
+	overflow: hidden;
+}
+
+.slideshow figcaption {
+	padding-top:20px;
+}
+
+.slideshow figcaption h3 {
+	font-weight: 300;
+	font-size: 200%;
+	text-align:center;
+	font-size:22px;
+}
+
+.item-share {
+	display:inline-block;
+	color:#fff;
+	font-size:12px;
+	border:1px solid #fff;
+	border-radius:3px;
+	padding:0 8px;
+	float:right;
+	margin-bottom:10px;
+}
+
+.grid-gallery figcaption .time-tan{
+	text-indent:0;
+
+	line-height:32px;
+
+}
+
+/* Navigation */
+.slideshow nav span {
+	position: fixed;
+	z-index: 1000;
+	color: #59656c;
+	text-align: center;
+	padding: 3%;
+	cursor: pointer;
+	font-size: 2.2em;
+}
+
+.slideshow nav span.nav-prev,
+.slideshow nav span.nav-next {
+	display:none;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.slideshow nav span.nav-next {
+	right: 0;
+}
+
+.slideshow nav span.nav-close {
+	top: 20px;
+	right: 20px;
+	padding: 0.5em 1em;
+	color: #fff;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAFD0lEQVR4Xu3d/XUTMQwAcGkC6ASFCWAEugHdACYAJqCdgG5AN6BM0DJB6QTQCSgTmKfH5RHS5GzrLFvSyf/l5eyz9as/kvRshEiuI4CuWxeNgwB2/kcQwAHsPALOmxc9OICdR8B584p7cErpKQC8AIB7RPzpPC4qm5dSegYAx4j4rbSCRcAppY8AcLZV6A0AvA3o0jAvu26C/QwAr7ZKOkPE81zJWeCUEsES8G56AIATRPyeu0m8z49ASuklAFwDAI2gu+kDIl7MlV4CnGYKCGS+XTZnBpfyPyDiERt4usFtpiaBnKWqv6AAd1PoESKSwd60tAdvCg3kesODOSpwARFnDUuAaYx/V1D/QC4IUu6SGlwAOEfE7cXvo+JLgGlyp1UzfUTKpUDORWjm/UrcO0SkBdhsygJT7ukzcCDnorng/Vpc+sg0N/duqlIEHMgL5AqySuHSrYuBA7lAinGJJG41cCAzBBvOuaXD8vYtq3rwJmPMycuhpXtu9Ry826RA5iP3wmUN0dvNCuR65J64i4FjTq4D7o3bBDiQy5BH4DYDDuR55FG4TYEDeT/ySNzmwIH8P/JoXBHgQP6LrAFXDHjtyFpwRYHXiqwJVxx4bcjacLsArwVZI243YO/IWnG7AntF1ozbHdgbsnbcIcBekC3gDgO2jmwFdyiwVWRLuMOBrSFbw1UBbAXZIq4aYO3IVnFVAWtFtoyrDlgbsnVclcBakD3gqgUejewFVzXwKGRPuOqBeyN7wzUB3AvZI64ZYGlkr7imgKWQPeOaA26N7B3XJHAr5DXgmgVmItN2Q7SJ5xMAoN1p6PW+7QGp+O10x3myfreQUa9ZT/iPquzufSufT+ZU2zSu6R680RJENo/rApgxXJf0ZBe4boAbI7vBdQW8hUz7Vx+XdNM917jCdQc8Ib8GgC9M4FNEvGLmVZnN9Cp6X0SnRdcvTrRzW/NyyhydxyMwHVzxgxnY2c21mWUOzeYR+D0AfGJGlQ4auWTmVZnNFXDl14/7QNztd+0GuAHuBtwVsgvghrjukM0DC+C6QjYNzMD9Pf2aVLogMj9cmwWuxKVvqN5sTmmb8tJq2f1BIyaBGbiPDrCo/BXKbE82B9wCl/lTo0lkU8AtcdeCbAZYAncNyCaAJXG9I6sH7oHrGVk1cE9cr8hqgUfgekRWCTwS1xuyOmANuJ6QVQFrwvWCrAZYI64HZBXAmnGtIw8HtoBrGXkosCVcq8jDgC3iWkQeAmwZ1xpyd2APuJaQuwJ7wrWC3A3YI64F5C7AnnG1I4sDrwFXM7Io8JpwtSKLAa8RVyOyCPCacbUhNwcO3H9PxWj45/qmwIH7+JGn0cjNgAP38PNsI5GbAAdu/mHFUciLgQM3jzty4bUIOHDLcUchs4EDtx53BDILOHD5uL2Rq4EDdzluT+Qq4MBth9sLuRg4cNvj9kAuAg5cOVxp5CxwSok297xdwwEW8ozzd2B8GfIcEWnvkIOpBPiaTh0paLy7zbQL2tz8kkrkK0Q8ZQNX7L0cuA2pa5Bze1zP9uBpeM7tvRy4DXEZc/LsHtclQzSN8XSY1L4UuAK4Fcj3iEhrpEVz8KEzEAJXELcQ+QQRbxYBU+aUEi2yLqa9He8B4BIR6Wi4SJ0ikFKieL+ZTpT5Sh45XKpadojuVP+4jVAEAlgosFqKDWAtEkL1CGChwGopNoC1SAjVI4CFAqul2ADWIiFUjwAWCqyWYv8A1+2AtWIoGcMAAAAASUVORK5CYII=');
+	width:22px;
+	height:22px;
+	background-size:22px;
+	background-repeat:no-repeat;
+
+}
+
+.icon:before,
+.icon:after {
+	font-family: 'fontawesome';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Info on arrow key navigation */
+.info-keys {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	width: 60px;
+	font-size: 8px;
+	padding-top: 20px;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+.info-keys:before,
+.info-keys:after {
+	position: absolute;
+	top: 0;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #fff;
+	text-align: center;
+	line-height: 14px;
+	font-size: 12px;
+}
+
+.info-keys:before {
+	left: 10px;
+	content: "\e603";
+}
+
+.info-keys:after {
+	right: 10px;
+	content: "\e604";
+}
+
+/* Example media queries (reduce number of columns and change slideshow layout) */
+
+@media screen and (max-width: 60em) {
+	/* responsive columns; see "Element sizing" on http://masonry.desandro.com/options.html */
+	.grid li {
+		width: 33.3%;
+	}
+
+	.slideshow li {
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		margin: 0;
+	}
+
+	.slideshow li figure img {
+		width: auto;
+		margin: 0 auto;
+		max-width: 100%;
+	}
+
+	.slideshow nav span,
+	.slideshow nav span.nav-close {
+		font-size: 1.8em;
+		padding: 0.3em;
+	}
+
+	.info-keys {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 35em) {
+	.grid li {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 24em) {
+	.grid li {
+		width: 100%;
+	}
+}
+

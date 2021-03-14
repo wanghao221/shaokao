@@ -1,0 +1,24 @@
+/* IE6 7 8 */
+.site-logo {background-image:url("../images/site-logo.png");}
+#header .navbar-nav li {float:left;}
+.banner-btn a {display:block;margin:0 auto;width:110px;background-color:#d00c1b;}
+.wok-promo .banner-btn a {width:150px;white-space:nowrap;}
+
+
+/* IE8 */
+
+
+
+/* IE7 */
+
+
+
+
+/* IE6 */
+body {_padding-top:0;}
+#header {_margin-bottom:0;}
+#header .navbar-nav .active {_background:none;}
+.wok-promo {_background-position:center 0;}
+.wok-promo-txt {_margin:0;}
+
+

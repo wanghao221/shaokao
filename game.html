@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="BBQ">
+	<title>学习使我快乐，编程使我永生</title>
+	<meta name="keywords" content="海拥CSDN博客,海拥CSDN博客酒吧烧烤,海拥CSDN博客加盟,烧烤加盟">
+	<meta name="description" content="海拥CSDN博客酒吧烧烤首创海盗主题酒吧烧烤，烧烤加盟请关注海拥CSDN博客，在这里可以大快朵颐，在这里可以尽情放肆，喝酒吃肉，打劫社交，海拥CSDN博客酒吧烧烤加盟，要味道还要腔调>
+	<link rel="icon" type="image/x-icon" href="favicon.ico" >
+
+	<link rel="stylesheet" type="text/css" href="css/hd/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/hd/component.css" />
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/icon.css">
+	<script src="js/hd/modernizr.custom.js"></script>
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" href="css/iehack.css">
+	<script src="js/html5shiv.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	<script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?05e4a554b37e54a1436450128ce7173c";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+	</script>
+
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<style type="text/css">
+		/* item-share */
+		.share{position:relative;}
+		.share dt{cursor:pointer;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;position:relative;z-index:99;}
+		.share dd{position:absolute;left:0;top:29px;display:none; margin:0; padding:0; width:62px;}
+		.share dd ul{padding:4px;width:104px;max-height:250px;overflow:auto;}
+	</style>
+	<script type="text/javascript">
+        $(function(){
+			/*============================
+			 @item-share
+			 ============================*/
+            $(".share").each(function(){
+                var s=$(this);
+                var z=parseInt(s.css("z-index"));
+                var dt=$(this).children("dt");
+                var dd=$(this).children("dd");
+                var _show=function(){dd.slideDown(200);dt.addClass("cur");s.css("z-index",z+1);};   //展开效果
+                var _hide=function(){dd.slideUp(200);dt.removeClass("cur");s.css("z-index",z);};    //关闭效果
+                dt.click(function(){dd.is(":hidden")?_show():_hide();});
+                dd.find("a").click(function(){dt.html($(this).html());_hide();});     //选择效果（如需要传值，可自定义参数，在此处返回对应的“value”值 ）
+                $("body").click(function(i){ !$(i.target).parents(".share").first().is(s) ? _hide():"";});
+            })
+        })
+	</script>
+
+</head>
+<body>
+<!-- Header -->
+<header id="header" class="">
+	<div class="container">
+		<div class="global-nav">
+			<button class="navbar-toggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="brand" href="index.html">烤天下</a>
+			<nav class="navbar">
+				<ul class="nav">
+					<li class="pc-nav-home">
+						<a href="index.html">首页</a>
+					</li>
+					<li class="pc-nav-food">
+						<a href="food.html">招牌美食</a>
+					</li>
+					<li class="pc-nav-char">
+						<a href="game.html" class="char-current">特色游戏</a>
+					</li>
+					<li class="pc-nav-join">
+						<a href="join.html">招商加盟</a>
+					</li>
+					<li class="pc-nav-ente">
+						<a href="profile.html">企业概况</a>
+					</li>
+					<li class="pc-nav-menn">
+						<a href="about.html">联系我们</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<!-- game -->
+<section class="time-background">
+	<div class="item-title">
+		<h1>特色游戏</h1>
+		<h3>Featured display</h3>
+	</div>
+	<div id="grid-gallery" class="grid-gallery">
+		<section class="grid-wrap">
+			<ul class="grid">
+				<li class="grid-sizer"></li>
+				<!-- for Masonry column width -->
+				<li>
+					<figure> <img src="img/hd/hd-1.jpg" alt="img01"/>
+						<figcaption>
+							<h3>奶瓶喝啤酒</h3>
+							<p>2016-06-20</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure> <img src="img/hd/hd-2.jpg" alt="img02"/>
+						<figcaption>
+							<h3>练就肺活量</h3>
+							<p>2017-03-10</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure> <img src="img/hd/hd-3.jpg" alt="img03"/>
+						<figcaption>
+							<h3>开发小脑</h3>
+							<p>2017-02-20</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure> <img src="img/hd/hd-4.jpg" alt="img04"/>
+						<figcaption>
+							<h3>摇一摇擂台赛</h3>
+							<p>2016-12-25</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure> <img src="img/hd/hd-5.jpg" alt="img05"/>
+						<figcaption>
+							<h3>中秋节</h3>
+							<p>2016-09-01</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure> <img src="img/hd/hd-6.jpg" alt="img06"/>
+						<figcaption>
+							<h3>比基尼派对</h3>
+							<p>2016-08-24</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure> <img src="img/hd/hd-7.jpg" alt="img01"/>
+						<figcaption>
+							<h3>万圣节游戏</h3>
+							<p>2016-12-24</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure> <img src="img/hd/hd-8.jpg" alt="img02"/>
+						<figcaption>
+							<h3>欧冠之夜</h3>
+							<p>2016-05-20</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure> <img src="img/hd/hd-9.jpg" alt="img03"/>
+						<figcaption>
+							<h3>萤火虫之夜</h3>
+							<p>2016-04-22</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure> <img src="img/hd/hd-10.jpg" alt="img04"/>
+						<figcaption>
+							<h3>生日趴</h3>
+							<p>2016-03-14</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure> <img src="img/hd/hd-11.jpg" alt="img05"/>
+						<figcaption>
+							<h3>求婚现场</h3>
+							<p>2016-02-27</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure> <img src="img/hd/hd-12.jpg" alt="img01"/>
+						<figcaption>
+							<h3>商务包场</h3>
+							<p>2016-01-07</p>
+						</figcaption>
+					</figure>
+				</li>
+				
+				<li>
+					<figure> <img src="img/hd/hd-11.jpg" alt="img05"/>
+						<figcaption>
+							<h3>goushi</h3>
+							<p>2021-03-09</p>
+						</figcaption>
+					</figure>
+				</li>
+				
+			</ul>
+		</section>
+		<!-- // grid-wrap -->
+
+		<section class="slideshow">
+			<ul>
+				<li>
+					<figure>
+						<figcaption>
+							<h3>奶瓶喝啤酒</h3>
+							<div class="clearfix">
+								<p class="time-tan " style="float:left">2017-05-01</p>
+								<!-- 自定义分享 begin -->
+								<dl class="item-share share">
+									<dt><i class="item-share-icon">分享</i></dt>
+									<dd>
+										<div class="item-qq"></div>
+										<div class="item-weibo"></div>
+										<div class="item-weixin"></div>
+									</dd>
+								</dl>
+								<!-- 自定义分享 End -->
+							</div>
+						</figcaption>
+						<a href="https://www.baidu.com/"><img src="img/hd/hd-s1.jpg" alt="img01"/></a>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<figcaption>
+							<h3>练就肺活量</h3>
+							<p class="time-tan">2017-05-01</p>
+							<!-- 自定义分享 begin -->
+							<dl class="item-share share">
+								<dt><i class="item-share-icon">分享</i></dt>
+								<dd>
+									<div class="item-qq"></div>
+									<div class="item-weibo"></div>
+									<div class="item-weixin"></div>
+								</dd>
+							</dl>
+							<!-- 自定义分享 End -->
+						</figcaption>
+						<img src="img/hd/hd-s1.jpg" alt="img01"/>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<figcaption>
+							<h3>开发小脑</h3>
+							<p class="time-tan">2017-05-01</p>
+							<!-- 自定义分享 begin -->
+							<dl class="item-share share">
+								<dt><i class="item-share-icon">分享</i></dt>
+								<dd>
+									<div class="item-qq"></div>
+									<div class="item-weibo"></div>
+									<div class="item-weixin"></div>
+								</dd>
+							</dl>
+							<!-- 自定义分享 End -->
+						</figcaption>
+						<img src="img/hd/hd-s1.jpg" alt="img01"/>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<figcaption>
+							<h3>摇一摇擂台赛</h3>
+							<p class="time-tan">2017-05-01</p>
+							<!-- 自定义分享 begin -->
+							<dl class="item-share share">
+								<dt><i class="item-share-icon">分享</i></dt>
+								<dd>
+									<div class="item-qq"></div>
+									<div class="item-weibo"></div>
+									<div class="item-weixin"></div>
+								</dd>
+							</dl>
+							<!-- 自定义分享 End -->
+						</figcaption>
+						<img src="img/hd/hd-s1.jpg" alt="img01"/>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<figcaption>
+							<h3>中秋节</h3>
+							<p class="time-tan">2017-05-01</p>
+							<!-- 自定义分享 begin -->
+							<dl class="item-share share">
+								<dt><i class="item-share-icon">分享</i></dt>
+								<dd>
+									<div class="item-qq"></div>
+									<div class="item-weibo"></div>
+									<div class="item-weixin"></div>
+								</dd>
+							</dl>
+							<!-- 自定义分享 End -->
+						</figcaption>
+						<img src="img/hd/hd-s1.jpg" alt="img01"/>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<figcaption>
+							<h3>比基尼派对</h3>
+							<p class="time-tan">2017-05-01</p>
+							<!-- 自定义分享 begin -->
+							<dl class="item-share share">
+								<dt><i class="item-share-icon">分享</i></dt>
+								<dd>
+									<div class="item-qq"></div>
+									<div class="item-weibo"></div>
+									<div class="item-weixin"></div>
+								</dd>
+							</dl>
+							<!-- 自定义分享 End -->
+						</figcaption>
+						<img src="img/hd/hd-s1.jpg" alt="img01"/>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<figcaption>
+							<h3>万圣节游戏</h3>
+							<p class="time-tan">2017-05-01</p>
+							<!-- 自定义分享 begin -->
+							<dl class="item-share share">
+								<dt><i class="item-share-icon">分享</i></dt>
+								<dd>
+									<div class="item-qq"></div>
+									<div class="item-weibo"></div>
+									<div class="item-weixin"></div>
+								</dd>
+							</dl>
+							<!-- 自定义分享 End -->
+						</figcaption>
+						<img src="img/hd/hd-s1.jpg" alt="img01"/>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<figcaption>
+							<h3>欧冠之夜</h3>
+							<p class="time-tan">2017-05-01</p>
+							<!-- 自定义分享 begin -->
+							<dl class="item-share share">
+								<dt><i class="item-share-icon">分享</i></dt>
+								<dd>
+									<div class="item-qq"></div>
+									<div class="item-weibo"></div>
+									<div class="item-weixin"></div>
+								</dd>
+							</dl>
+							<!-- 自定义分享 End -->
+						</figcaption>
+						<img src="img/hd/hd-s1.jpg" alt="img01"/>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<figcaption>
+							<h3>萤火虫之夜</h3>
+							<p class="time-tan">2017-05-01</p>
+							<!-- 自定义分享 begin -->
+							<dl class="item-share share">
+								<dt><i class="item-share-icon">分享</i></dt>
+								<dd>
+									<div class="item-qq"></div>
+									<div class="item-weibo"></div>
+									<div class="item-weixin"></div>
+								</dd>
+							</dl>
+							<!-- 自定义分享 End -->
+						</figcaption>
+						<img src="img/hd/hd-s1.jpg" alt="img01"/>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<figcaption>
+							<h3>生日趴</h3>
+							<p class="time-tan">2017-05-01</p>
+							<!-- 自定义分享 begin -->
+							<dl class="item-share share">
+								<dt><i class="item-share-icon">分享</i></dt>
+								<dd>
+									<div class="item-qq"></div>
+									<div class="item-weibo"></div>
+									<div class="item-weixin"></div>
+								</dd>
+							</dl>
+							<!-- 自定义分享 End -->
+						</figcaption>
+						<img src="img/hd/hd-s1.jpg" alt="img01"/>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<figcaption>
+							<h3>求婚现场</h3>
+							<p class="time-tan">2017-05-01</p>
+							<!-- 自定义分享 begin -->
+							<dl class="item-share share">
+								<dt><i class="item-share-icon">分享</i></dt>
+								<dd>
+									<div class="item-qq"></div>
+									<div class="item-weibo"></div>
+									<div class="item-weixin"></div>
+								</dd>
+							</dl>
+							<!-- 自定义分享 End -->
+						</figcaption>
+						<img src="img/hd/hd-s1.jpg" alt="img01"/>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+
+				<li>
+					<figure>
+						<figcaption>
+							<h3>商务包场</h3>
+							<p class="time-tan">2017-05-01</p>
+							<!-- 自定义分享 begin -->
+							<dl class="item-share share">
+								<dt><i class="item-share-icon">分享</i></dt>
+								<dd>
+									<div class="item-qq"></div>
+									<div class="item-weibo"></div>
+									<div class="item-weixin"></div>
+								</dd>
+							</dl>
+							<!-- 自定义分享 End -->
+						</figcaption>
+						<img src="img/hd/hd-s1.jpg" alt="img01"/>
+						<figcaption>
+							<p class="text-tan">摇滚乐源于美国。直到今天，美国摇滚乐仍然受到青年人的喜爱。摇滚乐是由一种称为“布鲁斯”的爵士乐演变而来的。摇滚乐又称摇摆舞音乐或摇摆乐、滚石乐等，是当今西方世界极其盛行的流行音乐。</p>
+							<p class="text-tan">２０世纪３０年代至５０年代，美国的一些黑人乐师在演奏仅流行于黑人地区的“布鲁斯”时，融会了黑人教堂音乐、西部乡土音乐及民间音乐的演奏技巧和风格，综合而成了摇摆乐。这种音乐是一种非常活跃的两拍节奏的音乐，节奏强烈、音响丰富，其演奏乐器和歌唱方面与其他传统的流行音乐也不一样。</p>
+						</figcaption>
+					</figure>
+				</li>
+			</ul>
+			<nav> <span class="icon nav-prev"></span> <span class="icon nav-next"></span> <span class="icon nav-close"></span> </nav>
+		</section>
+		<!-- // slideshow -->
+	</div>
+</section>
+<div class="dialog">
+	<div class="dialog-inner">
+		<div class="dialog-container">
+			<div class="dialog-heading">
+				<a class="close" href="javascript:web.dialog.close()">
+					<span></span>
+					<span></span>
+				</a>
+			</div>
+			<div class="dialog-body">
+				<div>
+					<h1>万科北京绿色建筑公园游客中心</h1>
+					<p>游客中心位于万科北京绿色建筑公园的入口处。该项目按照中国绿色建筑评价标准的三星级和英国绿色建筑评估标准（BREEAM）的最高级杰出级标准进行设计和建造。该项目从建筑全寿命周期的角度综合考虑材料利用、建筑能耗、水耗、污染、交通等影响环境的各种因素，尽可能减少建筑对环境的影响。项目优先采取被动式设计，最大程度实现自然采光和通风等；优化围护结构热工性能；使用高效的设备系统；使用创新的可再生能源，将地沟油转化为生物柴油供应CHP系统，最终实现了“循环经济”的理念。项目的设计有助于将“北京绿色建筑公园” 打造成为面向社会、面向公众的公益性教育展示场所、专业人士学习借鉴的示范基地和国际行业交流平台的理念。项目通过对绿色建筑工程和技术的示范、展示，使广大市民在休闲、参观和体验的同时，了解绿色建筑的科技含量和品质提升，培养公众自觉的节能减排意识。</p>
+					<p>业主：万科<br>
+						业态：展陈建筑<br>
+						建筑设计：Bogle Architects<br>
+						服务内容：BREEAM认证咨询</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="dialog-backdrop"></div>
+<!-- Footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="copy">©AUI 京ICP备88888888号-1  更多模板：<a href="https://blog.csdn.net/qq_44273429/" target="_blank"><font color="#ffffff">海拥CSDN博客</font></a> 
+		</div>
+		<div class="copy">
+			Copyright © 1999-2021  <span>地址：北京市海淀区北三环西路43号中航广场6层</span>
+		</div>
+	</div>
+</footer>
+
+<script src="js/hd/imagesloaded.pkgd.min.js"></script>
+
+<script src="js/hd/masonry.pkgd.min.js"></script>
+
+<script src="js/hd/classie.js"></script>
+
+<script src="js/hd/cbpGridGallery.js"></script>
+
+<script>
+
+    new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+
+</script>
+
+<script src="js/banner.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/web.core.js"></script>
+<script src="js/web.adtabs.js"></script>
+<script src="js/web.subnav.js"></script>
+<script src="js/web.ui.js"></script>
+</body>
+</html>
